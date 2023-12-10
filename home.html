@@ -1,0 +1,46 @@
+<html>
+  <body>
+    <script>
+      function promptForCredentials() {
+        const superAdminCredentials = {
+          username: "admin",
+          password: "admin",
+        };
+
+        let enteredUsername, enteredPassword;
+
+        do {
+          enteredUsername = prompt("Enter Username: ");
+          if (!enteredUsername) {
+            alert("Invalid username. Try again");
+          } else if (enteredUsername !== superAdminCredentials.username) {
+            alert("Invalid username. Try again");
+          }
+        } while (
+          !enteredUsername ||
+          enteredUsername !== superAdminCredentials.username
+        );
+
+        do {
+          enteredPassword = prompt("Enter Password: ");
+          if (!enteredPassword) {
+            alert("Invalid password. Try again");
+            return;
+          } else if (enteredPassword !== superAdminCredentials.password) {
+            alert("Invalid password. Try again");
+          }
+        } while (
+          !enteredPassword ||
+          enteredPassword !== superAdminCredentials.password
+        );
+
+        if (enteredPassword === superAdminCredentials.password) {
+          window.location.href = "/randomKey";
+        } else {
+          alert("Invalid Credentials. Please Try Again!!!");
+        }
+      }
+    </script>
+    <button onclick="promptForCredentials()">Generate Key</button>
+  </body>
+</html>
