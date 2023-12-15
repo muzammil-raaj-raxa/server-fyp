@@ -1,9 +1,0 @@
-[[redirects]]
-  from = "/randomKey"
-  to = "/.netlify/functions/app/randomKey"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
