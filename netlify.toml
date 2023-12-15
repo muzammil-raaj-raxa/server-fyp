@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/randomKey"
-  to = "/randomKey"
+  to = "/.netlify/randomKey"
   status = 200
 
 [[redirects]]
