@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 });
 
 // Generate and store a random key in Firestore
-app.get("/.netlify/randomKey", async (req, res) => {
+app.get("/.netlify/functions/app/randomKey", async (req, res) => {
   try {
     // Generate a random key using the imported function
     const randomKey = generateRandomKey(5);
